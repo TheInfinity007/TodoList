@@ -24,3 +24,10 @@ $("input[type='text']").on("keypress", function(event){
 $(".fa-plus").on("click", function(){
 	$("input[type='text']").fadeToggle();
 })
+
+$("button[data-dismiss='modal']").on("click", function(){
+	$("#modal").fadeToggle();
+});
+$(".fa-info-circle").on("click", function(){
+	$("#modal").fadeToggle();
+})

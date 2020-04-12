@@ -11,8 +11,8 @@
 </head>
 <body>
 	<div id="container">
-		<h1>To-Do List <i class="fa fa-info-circle"></i>
-<i class="fas fa-plus"></i></h1>
+		<h1>To-Do List <i class="fa fa-info-circle" title="Info"></i>
+		<i class="fas fa-plus"></i></h1>
 		<input type="text" name="" placeholder="Add new to-do....." maxlength="40">
 
 		<ul>
@@ -20,8 +20,26 @@
 			<li> <span> <i class='fas fa-trash'></i> </span>todoText</li>
 			<li> <span> <i class='fas fa-trash'></i> </span>todoText</li>
 		</ul>
-		<div class="demo">
-			<p>Thiis is a demo.</p>
+	
+	</div>
+	<div class="modal" id="modal" role="dialog" style="display:none;">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Features</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<h6>
+						<p>Enter text into the input field to add items to your to-do-list.</p>
+						<p>Click the items to mark it as complete.</p>
+						<p>Click the delete button to remove the to-do (visible on click or hover).</p>
+					</h6>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn-close" data-dismiss="modal">Close</button>
+				</div>
+			</div>			
 		</div>
 	</div>
 

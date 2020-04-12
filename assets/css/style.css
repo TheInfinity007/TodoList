@@ -2,17 +2,18 @@
 {
 	margin:0;
 	padding:0;
+	box-sizing: 	border-box;	
 }
 body
 {
 	font-family: 'Roboto', sans-serif;
-	background: -webkit-linear-gradient(to left, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #23a6d5;
 	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
 	background-size: 400% 400%;
 	-webkit-animation: Gradient 20s ease infinite;
 	-moz-animation: Gradient 20s ease infinite;
 	animation: Gradient 20s ease infinite;
+	height:100%;
 }
 
 @-webkit-keyframes Gradient {
@@ -66,14 +67,6 @@ body
 	border-top-left-radius:14px; 
 	border-top-right-radius: 14px;
 }
-@media(max-width:768px)
-{	
-	#container
-	{
-		width: 90%;
-		margin:100px auto;
-	}
-}
 .fa-plus
 {
 	float:right;
@@ -89,7 +82,7 @@ body
 
 .fa-info-circle:hover
 {
-	display:visible;
+	color: #ded5d5;
 }
 
 #container input
@@ -112,7 +105,7 @@ input:focus
 }
 ul
 {
-	margin:5px;
+	margin-top:5px;
 	padding:0;
 	list-style:none;
 	overflow:none;
@@ -162,4 +155,111 @@ li:hover span
 	color:gray;
 	text-decoration: line-through;
 	color: rgb(194, 192, 192);
+}
+.modal
+{
+	position: absolute;
+	top:0;
+	width:100%;
+	height:100%;
+	z-index: 1;
+}
+.modal::before
+{
+	content:'';
+	z-index:2;
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: rgba(0,0,0,0.4)
+}
+.modal-dialog
+{
+	display:flex;
+	justify-content: center;
+}
+.modal-content
+{
+	z-index:2;
+	width:600px;
+	padding:20px;
+	margin-top:100px;
+	background:#f5faff;
+	border-radius: 14px;
+	box-shadow:0 2px 15px 2px rgba(0,0,0,0.8);
+}
+.modal-header
+{
+	position: relative;	
+	margin-bottom:18px;
+	text-align:center;
+}
+.modal-title
+{
+	font-size:36px;
+	display: inline;
+	letter-spacing: 2px;
+}
+.modal-body h6
+{
+	font-size:20px;
+	font-weight: 400;
+}
+.modal-footer
+{
+	text-align: center;
+	margin-top:8px;
+}
+button
+{
+	padding:5px;
+	border:none;
+}
+button.close
+{
+	background: #f5faff;
+	font-size:24px;
+	line-height: 16px;
+	position:absolute;
+	right:0;
+	top:-3px;
+	outline:none;
+}
+button.close:hover
+{
+	color:#757474;
+}
+button.btn-close
+{
+	background:	#f00202;
+	color:#fff;
+	padding:5px;
+	border-radius: 5px;
+	margin:0 auto;
+	border: 2px solid #f00202;
+	color:#f00202;
+	background: #f5faff;
+	font-width:500;
+	outline:none;
+}
+button.btn-close:hover
+{
+	background:#f00202;
+	color: #f5faff;
+
+}
+@media(max-width:768px)
+{	
+	#container
+	{
+		width: 90%;
+		margin:100px auto;
+	}
+	.modal-content
+	{
+		width:90%;
+		background:#f5faff;
+	}
 }
