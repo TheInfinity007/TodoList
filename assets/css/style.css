@@ -152,10 +152,10 @@ li:hover span
 }
 .completed
 {
-	color:gray;
 	text-decoration: line-through;
 	color: rgb(194, 192, 192);
 }
+/*modal*/
 .modal
 {
 	position: absolute;
@@ -250,6 +250,7 @@ button.btn-close:hover
 	color: #f5faff;
 
 }
+/*media-queries*/
 @media(max-width:768px)
 {	
 	#container
